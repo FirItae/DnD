@@ -32,8 +32,26 @@
       </div>
     </div>
   </div>
+    <div class="row gx-5">
+      <div class="col-6 col-md-2 p-3 border bg-light"">
+        <div>
+          <input type="text" class="form-control" placeholder="Strength" >
+          <br>
+          <input type="text" class="form-control" placeholder="Dexterity" >
+          <br>
+          <input type="text" class="form-control" placeholder="Constitution" >
+          <br>
+          <input type="text" class="form-control" placeholder="Intelligence" >
+          <br>
+          <input type="text" class="form-control" placeholder="Wisdom" >
+          <br>
+          <input type="text" class="form-control" placeholder="Charisma" >
+        </div>
+      </div>
+    </div>
 </div>
 </template>
+
 
 <script>
 import axios from 'axios';
