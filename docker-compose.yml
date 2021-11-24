@@ -5,10 +5,8 @@ services:
         build: ./server
         ports:
             - 5000:5000
-        volumes:
-            - ./server:/server
-        entrypoint: "/bin/bash"
-    vue-todos-app:
-        build: ./client
-        ports:
-            - 8080:8080
+
+    #vue-todos-app:
+        #build: ./client
+        #ports:
+       #    - 8080:8080
