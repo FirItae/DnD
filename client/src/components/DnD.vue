@@ -306,14 +306,32 @@
                     <span class="char-sheet__label centered">навыки</span>
                   </div>
                 </div>
-
-
               </div>
               <div class="modifier-block">
                 <div class="modifier-block__wrap">
                   <p class="modifier-block__modifier ellipsis">10</p>
                 </div>
                 <p class="modifier-block__label">пассивная мудрость (Восприятие)</p>
+              </div>
+              <div class="text-block  ">
+                <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 7px; line-height: 12px; background: repeating-linear-gradient(rgb(255, 255, 255) 1px, rgb(255, 255, 255) 12px, rgb(218, 218, 218) 1px, rgb(218, 218, 218) 13px);">
+                  <div data-slate-node="element" style="position: relative;">
+                    <span data-slate-node="text">
+                      <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                        <span data-slate-zero-width="n" data-slate-length="0">
+                          <br>
+                        </span>
+                        </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="text-block__label-wrap">
+                  <input class="char-sheet__label centered " value="Прочие владения и языки">
+                </div>
+                <div class="text-block__controls"><span class="text-block__font-size">7</span>
+                  <button class="text-block__controls-button" data-sign="+" type="button">+</button>
+                  <button class="text-block__controls-button" data-sign="-" type="button">−</button>
+                </div>
               </div>
 
             </div>
@@ -364,7 +382,7 @@ export default {
     border: 1pt solid #000;
     border-radius: 2pt 2pt 0 0;
     margin-bottom: 16pt;
-    padding: 6pt 2pt;
+    padding: 1pt 2pt;
     text-align: center;
     width: 43pt;
 }
@@ -395,20 +413,18 @@ export default {
     border: 2pt solid #000;
     border-radius: 3pt;
     display: flex;
-    height: 28pt;
+    height: 25pt;
     justify-content: center;
     margin: 0;
     position: relative;
-    width: 28pt;
+    width: 25pt;
 }
 .modifier-block {
     align-items: center;
     display: flex;
     margin: 0 0 5pt;
 }
-.modifier-block__wrap {
-    position: relative;
-}
+
 .inspiration {
     align-items: center;
     cursor: pointer;
@@ -470,6 +486,7 @@ export default {
     align-items: center;
     display: flex;
     margin-bottom: 2pt;
+    height: 16pt;
 }
 .char-skill__check {
     margin: 0 6pt 0 0;
@@ -530,9 +547,19 @@ input[type="text" i] {
     padding: 0 0 1mm;
     width: 100%;
 }
+.char-sheet__stats-skills .modifier-block:nth-of-type(2):before {
+  background: #4c453f;
+  border-left: 1pt solid #4c453f;
+  content: "";
+  display: block;
+  height: 14pt;
+  left: 4px;
+  position: absolute;
+  top: 20pt;
+}
 .char-sheet__label {
   font-family: Open Sans,sans-serif;
-  font-size: 6pt;
+  font-size: 8pt;
   font-weight: 400;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -541,12 +568,134 @@ input[type="text" i] {
     margin-bottom: 1.5pt;
 }
 .char-skill.small .char-skill__label {
-    font-size: 6pt;
+    font-size: 7pt;
 }
 .char-sheet__stats-skills {
   display: flex;
   margin-bottom: 7pt;
 }
 
+.text-block {
+    background: #fff;
+    border: 1pt solid #000;
+    border-radius: 2pt;
+    color: #000;
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 3pt 2pt;
+    position: relative;
+}
+.text-block__label-wrap {
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    padding-bottom: 3px;
+    position: absolute;
+    transform: translate(-50%);
+    width: 100%;
+}
+.text-block__controls {
+    align-items: center;
+    background: #eaeaea;
+    border-radius: 5pt 0 1pt 0;
+    bottom: 0;
+    display: flex;
+    height: 23px;
+    padding: 2px 3px;
+    position: absolute;
+    right: 0;
+}
+.text-block__font-size {
+    background: #eaeaea;
+    border-radius: 5pt 0 0 1pt;
+    font-size: 14px;
+    left: 1px;
+    opacity: 0;
+    padding: 1px 5px 2px;
+    position: absolute;
+    top: 0;
+    transform: translateX(0);
+    transition: opacity .1s,transform .2s;
+}
+.text-block__controls-button {
+    align-items: center;
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    font-family: Georgia;
+    font-size: 12px;
+    height: 13px;
+    justify-content: center;
+    margin: 0 2px;
+    min-width: 13px;
+    padding: 0;
+    width: 13px;
+}
+.char-sheet__body {
+  display: flex;
+  flex: 1 1;
+  margin: 0 -4pt;
+}
+.char-sheet__body-column {
+  display: flex;
+  flex-direction: column;
+  height: 668pt;
+  justify-content: flex-start;
+  margin: 0 4pt;
+  width: 33%;
+}
+
+
+.char-sheet__body .char-sheet__label {
+  font-weight: 700;
+}
+
+p *:last-child {
+    margin-bottom: 0;
+}
+.char-sheet__label.min {
+  font-size: 5pt;
+}
+.char-sheet__name {
+  border-bottom: 1pt solid #000;
+  flex: 0 1;
+  font-size: 14pt;
+  margin: 0 9pt 0 0;
+  min-width: 169pt;
+  padding: 3pt 9pt;
+  position: relative;
+}
+.more-block__heading {
+  display: block;
+  font-family: Open Sans,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.char-sheet__info-box {
+  display: flex;
+  font-size: 10pt;
+  margin: 0 2pt;
+  position: relative;
+  width: 32%;
+}
+.char-sheet__stats {
+  background: #eaeaea;
+  border-radius: 30pt;
+  margin-right: 3pt;
+  padding: 24pt 2pt 8pt;
+}
+.char-sheet__stats_aime {
+  border-radius: 15pt;
+  padding: 15pt 2pt 0;
+}
+.char-sheet__skills {
+  flex: 1 1;
+}
 
 </style>

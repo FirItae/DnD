@@ -27,15 +27,7 @@ export default {
     justify-content: space-between;
   }
 }
-.more-block__heading {
-  display: block;
-  font-family: Open Sans,sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 26px;
-  margin-bottom: 12px;
-  width: 100%;
-}
+
 .more-block__item {
   background: #fff;
   border-radius: 8px;
@@ -75,7 +67,6 @@ export default {
 
 @media print {
   .char-sheet {
-    // eslint-disable-next-line
     break-after: always;
     break-inside: avoid;
     margin: 0;
@@ -143,18 +134,8 @@ export default {
   text-align: center;
   width: 100%;
 }
-.char-sheet__label.min {
-  font-size: 5pt;
-}
-.char-sheet__name {
-  border-bottom: 1pt solid #000;
-  flex: 0 1;
-  font-size: 14pt;
-  margin: 0 9pt 0 0;
-  min-width: 169pt;
-  padding: 3pt 9pt;
-  position: relative;
-}
+
+
 .char-sheet__name .char-sheet__label {
   margin-left: 9pt;
   transform: translateY(calc(100% + 2pt));
@@ -176,13 +157,7 @@ export default {
   display: flex;
   margin-bottom: 15pt;
 }
-.char-sheet__info-box {
-  display: flex;
-  font-size: 10pt;
-  margin: 0 2pt;
-  position: relative;
-  width: 32%;
-}
+
 .char-sheet__info .char-sheet__input {
   border: 0;
   padding: 0;
@@ -191,49 +166,7 @@ export default {
 .char-sheet__info .char-sheet__info-box {
   font-size: 9.3pt;
 }
-.char-sheet__body {
-  display: flex;
-  flex: 1 1;
-  margin: 0 -4pt;
-}
-.char-sheet__body-column {
-  display: flex;
-  flex-direction: column;
-  height: 668pt;
-  justify-content: flex-start;
-  margin: 0 4pt;
-  width: 33%;
-}
-.char-sheet__body-column.wide {
-  width: 66%;
-}
-.char-sheet__body .char-sheet__label {
-  font-weight: 700;
-}
 
-.char-sheet__stats-skills .modifier-block:nth-of-type(2):before {
-  background: #4c453f;
-  border-left: 1pt solid #4c453f;
-  content: "";
-  display: block;
-  height: 14pt;
-  left: 4px;
-  position: absolute;
-  top: 20pt;
-}
-.char-sheet__stats {
-  background: #eaeaea;
-  border-radius: 30pt;
-  margin-right: 3pt;
-  padding: 24pt 2pt 8pt;
-}
-.char-sheet__stats_aime {
-  border-radius: 15pt;
-  padding: 15pt 2pt 0;
-}
-.char-sheet__skills {
-  flex: 1 1;
-}
 .char-sheet__attacks {
   margin-bottom: 10pt;
   max-height: 185.4pt;
@@ -249,15 +182,11 @@ export default {
 .char-sheet__equipment .char-sheet__label {
   margin-top: 2pt;
 }
-.char-sheet__equipment .text-block__textarea {
-  height: 100%;
-  max-height: 219pt;
-}
+
 .char-sheet__devider {
   height: 5pt;
 }
 .char-sheet__undertext {
-  // eslint-disable-next-line
   break-after: always;
   break-before: avoid;
   color: #a4a4a4;
