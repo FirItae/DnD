@@ -46,5 +46,13 @@ module.exports = {
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  }
+  },
+  overrides: [
+    {
+      files: ["*.vue"],
+      rules: {
+        'max-len': 'off' // disables line length check
+      }
+    }
+  ]
 }
