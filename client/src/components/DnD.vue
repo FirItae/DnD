@@ -1218,7 +1218,7 @@ button, input {
 }
 .weapons-block__cell {
     display: table-cell;
-    font-size: 7pt;
+    font-size: 8pt;
     height: 14pt;
     padding: 0 2px;
     text-align: center;
@@ -1232,7 +1232,7 @@ button, input {
     background: #efefef;
     border: 0;
     border-radius: 2pt 0 2pt 0;
-    font-size: 6pt;
+    font-size: 10pt;
     text-align: center;
     width: 100%;
 }
@@ -1257,7 +1257,7 @@ button, input {
     border-radius: 2px 0 0 2px;
     display: block;
     font-family: "PT Serif";
-    font-size: 7pt;
+    font-size: 10pt;
     margin-right: -1px;
     text-align: center;
     width: 13pt;
@@ -1265,7 +1265,7 @@ button, input {
 .coins-block__input {
     border: 1pt solid #000;
     border-radius: 2px;
-    font-size: 8pt;
+    font-size: 13pt;
     width: 30pt;
 }
 .coins-block-placeholder {
