@@ -313,7 +313,6 @@
                 </div>
                 <p class="modifier-block__label">пассивная мудрость (Восприятие)</p>
               </div>
-
               <div class="text-block">
                 <div data-gramm="false" class="text-block__textarea" zindex="-1" contenteditable="true"   style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px;">
                   <div data-slate-node="element" style="position: relative;">
@@ -337,7 +336,7 @@
             <div class="char-sheet__body-column">
               <div class="vitality-block">
                 <div class="vitality-block__box no-back">
-                  <svg class="vitality-block__shield" width="48"height="60" viewBox="0 0 48 60" fill="none">
+                  <svg class="vitality-block__shield" width="48" height="60" viewBox="0 0 48 60" fill="none">
                     <path d="M23.8494 0.802124L1.86096 12.5092V36.2236L9.39125 50.3321L23.8494 59.0374L38.0063 50.3321L46.139 36.2236V12.5092L23.8494 0.802124Z" fill="white"></path>
                     <path d="M46.8264 12.1484L24.2164 0.13221C23.881 -0.0463404 23.479 -0.0438346 23.1461 0.138475L1.16172 12.1546C0.801164 12.352 0.577545 12.7291 0.577545 13.1395V28.8356C0.590736 41.7383 8.25532 53.4111 20.1084 58.5803L23.1599 59.9066C23.445 60.0306 23.7698 60.0312 24.0556 59.9078L27.494 58.4268C39.5669 53.3697 47.4212 41.5841 47.4225 28.5243V13.1395C47.4225 12.7247 47.1932 12.3432 46.8264 12.1484ZM45.921 28.5C45.9185 40.6596 38.2441 52.2944 27.0029 57L23.6109 58.2L20.6968 57C9.66353 52.1885 2.09155 41.3562 2.07899 29.3457V13.2L23.6997 1.5L45.921 13.2V28.5Z" fill="black"></path>
                   </svg>
@@ -350,7 +349,185 @@
                   </button>
                   <p class="char-sheet__label centered min">Инициатива</p>
                 </div>
+                <div class="vitality-block__box">
+                  <input name="speed" type="text" class="vitality-block__box-value char-sheet__input" autocomplete="off" value="">
+                  <p class="char-sheet__label centered min">Скорость</p>
+                </div>
+                <div class="vitality-block__hp">
+                  <label for="vitality-max" class="vitality-block__input-label">Максимум хитов
+                    <input id="vitality-max" name="hp-max" type="number" class="vitality-block__input char-sheet__input" autocomplete="off" value="">
+                  </label>
+                  <input id="vitality-current" name="hp-current" type="number" class="vitality-block__hp-input  char-sheet__input" autocomplete="off" value="">
+                  <p class="char-sheet__label centered">Текущие хиты</p>
+                </div>
+                <div class="vitality-block__hp vitality-block__hp_temp">
+                  <input id="vitality-temp" name="hp-temp" type="number" class="vitality-block__hp-input char-sheet__input" autocomplete="off" value="">
+                  <p class="char-sheet__label centered">Временные хиты</p>
+                </div>
+                <div class="vitality-block__medium vitality-block__medium-hit-die">
+                  <label  class="vitality-block__input-label">Всего
+                    <input id="vitality-dice-current" name="hp-dice-current" type="text" class="vitality-block__input vitality-block__hp-max char-sheet__input" autocomplete="off" value="">
+                  </label>
+                  <button type="button" class="roller">
+                    <input id="vitality-die" name="hit-die" type="text" class="vitality-block__hp-input small char-sheet__input" autocomplete="off" value="">
+                  </button>
+                  <p class="char-sheet__label centered min">Кость хитов</p>
+                </div>
+                <div class="vitality-block__medium">
+                  <div class="vitality-block__death">
+                    <p class="vitality-block__death-label">Успехи</p>
+                    <div class="vitality-block__death-wrap">
+                      <span class="vitality-block__death-circle">
+                        <label class="checkdot no-print" for="checkdot-deathSuccess_0">
+                          <input class="checkdot__input" id="checkdot-deathSuccess_0" type="checkbox" name="deathSuccess_0">
+                          <span class="checkdot__marker">
+                          </span>
+                        </label>
+                      </span>
+                      <span class="vitality-block__death-circle">
+                        <label class="checkdot no-print" for="checkdot-deathSuccess_1">
+                          <input class="checkdot__input" id="checkdot-deathSuccess_1" type="checkbox" name="deathSuccess_1">
+                          <span class="checkdot__marker"></span>
+                        </label>
+                      </span>
+                      <span class="vitality-block__death-circle">
+                        <label class="checkdot no-print" for="checkdot-deathSuccess_2">
+                          <input class="checkdot__input" id="checkdot-deathSuccess_2" type="checkbox" name="deathSuccess_2">
+                          <span class="checkdot__marker"></span>
+                        </label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="vitality-block__death">
+                    <p class="vitality-block__death-label">Провалы</p>
+                    <div class="vitality-block__death-wrap">
+                      <span class="vitality-block__death-circle">
+                        <label class="checkdot no-print" for="checkdot-deathFail_0">
+                          <input class="checkdot__input" id="checkdot-deathFail_0" type="checkbox" name="deathFail_0">
+                          <span class="checkdot__marker"></span>
+                        </label>
+                      </span>
+                      <span class="vitality-block__death-circle">
+                        <label class="checkdot no-print" for="checkdot-deathFail_1">
+                          <input class="checkdot__input" id="checkdot-deathFail_1" type="checkbox" name="deathFail_1">
+                          <span class="checkdot__marker"></span>
+                        </label>
+                      </span>
+                      <span class="vitality-block__death-circle">
+                        <label class="checkdot no-print" for="checkdot-deathFail_2">
+                          <input class="checkdot__input" id="checkdot-deathFail_2" type="checkbox" name="deathFail_2">
+                          <span class="checkdot__marker"></span>
+                        </label>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="char-sheet__label centered min">Спасброски от смерти</p>
+                </div>
 
+              </div>
+              <div class="text-block char-sheet__attacks ">
+                <div class="weapons-block">
+                  <div class="weapons-block__row head">
+                    <div class="weapons-block__cell">Название</div>
+                    <div class="weapons-block__cell">Бонус <br> атаки</div>
+                    <div class="weapons-block__cell">Урон/вид</div>
+                  </div>
+                  <div class="weapons-block__row">
+                    <div class="weapons-block__cell">
+                      <input name="weaponName-0" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                    </div>
+                    <div class="weapons-block__cell">
+                      <button type="button" class="roller">
+                        <input name="weaponMod-0" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                      </button>
+                    </div>
+                    <div class="weapons-block__cell">
+                      <button type="button" class="roller">
+                        <input name="weaponDmg-0" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="weapons-block__row">
+                    <div class="weapons-block__cell">
+                      <input name="weaponName-1" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                    </div>
+                    <div class="weapons-block__cell">
+                      <button type="button" class="roller">
+                        <input name="weaponMod-1" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                      </button>
+                    </div>
+                    <div class="weapons-block__cell">
+                      <button type="button" class="roller">
+                        <input name="weaponDmg-1" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                      </button>
+                    </div>
+                  </div>
+                  <div class="weapons-block__row">
+                    <div class="weapons-block__cell">
+                      <input name="weaponName-2" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                    </div>
+                    <div class="weapons-block__cell">
+                      <button type="button" class="roller">
+                        <input name="weaponMod-2" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                      </button>
+                    </div>
+                    <div class="weapons-block__cell">
+                      <button type="button" class="roller">
+                        <input name="weaponDmg-2" type="text" class="weapons-block__input char-sheet__input" autocomplete="off" value="">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px; ">
+                  <div data-slate-node="element" style="position: relative;">
+                    <span data-slate-node="text">
+                      <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                        <span data-slate-zero-width="n" data-slate-length="0">
+                          <br>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="text-block__label-wrap">
+                  <input class="char-sheet__label centered " value="Атаки и заклинания">
+                </div>
+              </div>
+              <div class="char-sheet__equipment-wrapper">
+                <form class="coins-block" autocomplete="off">
+                  <div class="coins-block__coin"><span class="coins-block__label">мм</span>
+                    <input name="cp" type="number" class="coins-block__input char-sheet__input" autocomplete="off" value="">
+                  </div>
+                  <div class="coins-block__coin"><span class="coins-block__label">см</span>
+                    <input name="sp" type="number" class="coins-block__input char-sheet__input" autocomplete="off" value="">
+                  </div>
+                  <div class="coins-block__coin"><span class="coins-block__label">зм</span>
+                    <input name="gp" type="number" class="coins-block__input char-sheet__input" autocomplete="off" value="">
+                  </div>
+                  <div class="coins-block__coin"><span class="coins-block__label">эм</span>
+                    <input name="ep" type="number" class="coins-block__input char-sheet__input" autocomplete="off" value="">
+                  </div>
+                  <div class="coins-block__coin"><span class="coins-block__label">пм</span>
+                    <input name="pp" type="number" class="coins-block__input char-sheet__input" autocomplete="off" value="">
+                  </div>
+                </form>
+                <div class="text-block char-sheet__equipment ">
+                  <div class="coins-block-placeholder default"></div>
+                  <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px; ">
+                    <div data-slate-node="element" style="position: relative;">
+                      <span data-slate-node="text">
+                        <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                          <span data-slate-zero-width="n" data-slate-length="0">
+                            <br>
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="text-block__label-wrap">
+                    <input class="char-sheet__label centered " value="Снаряжение">
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -525,23 +702,8 @@ export default {
     -ms-user-select: none;
     user-select: none;
 }
-.checkdot__input {
-    display: none;
-}
-.checkdot__marker {
-    background: #fff;
-    border: 1pt solid #4c453f;
-    border-radius: 50%;
-    cursor: pointer;
-    display: block;
-    height: 7px;
-    min-width: 7px;
-    outline: none;
-    padding: 0;
-    position: relative;
-    transition: background .2s;
-    width: 7px;
-}
+
+
 input[type="text" i] {
     padding: 1px 2px;
 }
@@ -575,6 +737,23 @@ input[type="text" i] {
     min-height: 100vh;
     padding: 0 0 1mm;
     width: 100%;
+}
+.char-sheet__equipment {
+  display: block!important;
+}
+
+.char-sheet__equipment .char-sheet__label {
+  margin-top: 2pt;
+}
+
+.char-sheet__equipment-wrapper {
+  display: flex;
+  flex: 1 1;
+  position: relative;
+}
+.char-sheet__equipment .text-block__textarea {
+    height: 100%;
+    max-height: 219pt;
 }
 .char-sheet__stats-skills .modifier-block:nth-of-type(2):before {
   background: #4c453f;
@@ -610,6 +789,10 @@ input[type="text" i] {
 }
 .char-sheet input[type=number] {
     -moz-appearance: textfield;
+}
+.char-sheet__attacks {
+  margin-bottom: 10pt;
+  max-height: 200pt;
 }
 .text-block {
     background: #fff;
@@ -744,6 +927,7 @@ p *:last-child {
     justify-content: space-between;
     margin-bottom: 5pt;
     padding: 4pt 4pt 8pt;
+
 }
 .vitality-block__box {
   background: #fff;
@@ -792,8 +976,230 @@ svg:not(:root) {
     width: 60%;
 }
 .vitality-block__box .char-sheet__label {
-    font-size: 7pt;
+    font-size: 6pt;
     position: relative;
+}
+.vitality-block__box-initiative .roller {
+    height: 23pt;
+    margin: 0 auto;
+    width: 19pt;
+}
+.roller.active {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+button {
+    -webkit-tap-highlight-color: transparent;
+    background: none;
+    border: 0;
+    outline: none;
+}
+.vitality-block__hp {
+    background: #fff;
+    border: 1pt solid #000;
+    border-radius: 4pt 4pt 0 0;
+    margin-top: 5pt;
+    padding: 3pt 3pt 3pt 6pt;
+    width: 100%;
+}
+.vitality-block__input-label {
+    align-items: center;
+    color: #8d8d8d;
+    display: flex;
+    font-size: 7pt;
+    width: 100%;
+}
+.vitality-block__input {
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #8d8d8d!important;
+    font-size: 8pt;
+    height: 12pt;
+    margin-left: 6pt;
+    max-width: 60%;
+    outline: none;
+}
+.vitality-block__hp-input {
+    border: 0;
+    height: 35pt;
+    margin-top: 2pt;
+    text-align: center;
+    width:90%;
+}
+.vitality-block__hp-input.small {
+    font-size: 13pt;
+    height: 10pt;
+}
+.vitality-block__hp_temp {
+    border-radius: 0 0 4pt 4pt;
+    margin-bottom: 5pt;
+    margin-top: 3pt;
+}
+.vitality-block__medium {
+    background: #fff;
+    border: 1pt solid #000;
+    border-radius: 4pt;
+    margin-right: 4pt;
+    padding: 3pt 3pt 3pt 6pt;
+    width: calc(50% - 15pt);
+}
+.vitality-block__medium:last-of-type {
+    margin-right: 0;
+}
+.vitality-block__death {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2pt;
+}
+.vitality-block__death-label {
+    font-size: 6pt;
+    margin-bottom: 0;
+    margin-right: 2pt;
+}
+.vitality-block__death-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    width: 75px;
+}
+.vitality-block__death-circle {
+    align-items: center;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    height: 13px;
+    justify-content: center;
+    min-width: 13px;
+    width: 13px;
+    z-index: 5;
+}
+.vitality-block__death-circle:not(:last-of-type) {
+    margin-right: 3pt;
+}
+.checkdot__input {
+    display: none;
+}
+.checkdot__marker {
+    background: #fff;
+    border: 1pt solid #4c453f;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 7px;
+    min-width: 7px;
+    outline: none;
+    padding: 0;
+    position: relative;
+    transition: background .2s;
+    width: 7px;
+}
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.vitality-block__death-wrap:after, .vitality-block__death-wrap:before {
+    border-bottom: 1pt solid #000;
+    border-top: 1pt solid #000;
+    content: "";
+    height: 2pt;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 0;
+}
+button, input {
+    overflow: visible;
+}
+.checkdot__input:checked+.checkdot__marker {
+    background: #4c453f;
+}
+.weapons-block {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.weapons-block__row {
+    display: table-row;
+}
+.weapons-block__row.head .weapons-block__cell {
+    background: none;
+    color: #767676;
+    height: 15pt;
+    padding: 0;
+    white-space: nowrap;
+}
+.weapons-block__cell {
+    display: table-cell;
+    font-size: 7pt;
+    height: 14pt;
+    padding: 0 2px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.weapons-block__cell:nth-child(2) {
+    width: 20%;
+}
+.weapons-block__input {
+    background: #efefef;
+    border: 0;
+    border-radius: 2pt 0 2pt 0;
+    font-size: 6pt;
+    text-align: center;
+    width: 100%;
+}
+.coins-block {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    left: -5pt;
+    margin: 0;
+    position: absolute;
+    top: 4pt;
+    z-index: 10;
+}
+.coins-block__coin {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3pt;
+}
+.coins-block__label {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 2px 0 0 2px;
+    display: block;
+    font-family: "PT Serif";
+    font-size: 7pt;
+    margin-right: -1px;
+    text-align: center;
+    width: 13pt;
+}
+.coins-block__input {
+    border: 1pt solid #000;
+    border-radius: 2px;
+    font-size: 8pt;
+    width: 30pt;
+}
+.coins-block-placeholder {
+    float: left;
+    height: 94pt;
+    width: 45pt;
+}
+form {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.16rem;
 }
 
 </style>

@@ -159,23 +159,6 @@ export default {
 .char-sheet__info .char-sheet__info-box {
   font-size: 9.3pt;
 }
-
-.char-sheet__attacks {
-  margin-bottom: 10pt;
-  max-height: 185.4pt;
-}
-.char-sheet__equipment {
-  display: block!important;
-}
-.char-sheet__equipment-wrapper {
-  display: flex;
-  flex: 1 1;
-  position: relative;
-}
-.char-sheet__equipment .char-sheet__label {
-  margin-top: 2pt;
-}
-
 .char-sheet__devider {
   height: 5pt;
 }
