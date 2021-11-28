@@ -324,14 +324,12 @@
                       </span>
                     </span>
                   </div>
-
                 </div>
                 <br>
                 <div class="text-block__label-wrap">
                   <input class="char-sheet__label centered " value="Прочие владения и языки">
                 </div>
               </div>
-
             </div>
             <div class="char-sheet__body-column">
               <div class="vitality-block">
@@ -527,6 +525,90 @@
                   <div class="text-block__label-wrap">
                     <input class="char-sheet__label centered " value="Снаряжение">
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="char-sheet__body-column">
+              <div class="personality-block">
+                <div class="text-block  ">
+                  <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px;">
+                    <div data-slate-node="element" style="position: relative;">
+                      <span data-slate-node="text">
+                        <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                          <span data-slate-zero-width="n" data-slate-length="0">
+                            <br>
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="text-block__label-wrap">
+                    <input class="char-sheet__label centered min" value="Черты характера">
+                  </div>
+                </div>
+                <div class="text-block  ">
+                  <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px; ">
+                    <div data-slate-node="element" style="position: relative;">
+                      <span data-slate-node="text">
+                        <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                          <span data-slate-zero-width="n" data-slate-length="0">
+                            <br>
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="text-block__label-wrap">
+                    <input class="char-sheet__label centered min" value="Идеалы">
+                  </div>
+                </div>
+                <div class="text-block  ">
+                  <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px; ">
+                    <div data-slate-node="element" style="position: relative;">
+                      <span data-slate-node="text">
+                        <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                          <span data-slate-zero-width="n" data-slate-length="0">
+                            <br>
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="text-block__label-wrap">
+                    <input class="char-sheet__label centered min" value="Привязанности">
+                  </div>
+                </div>
+                <div class="text-block  ">
+                  <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px; ">
+                    <div data-slate-node="element" style="position: relative;">
+                      <span data-slate-node="text">
+                        <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                          <span data-slate-zero-width="n" data-slate-length="0">
+                            <br>
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="text-block__label-wrap">
+                    <input class="char-sheet__label centered min" value="Слабости">
+                  </div>
+                </div>
+              </div>
+              <div class="text-block  ">
+                <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px;">
+                  <div data-slate-node="element" style="position: relative;">
+                    <span data-slate-node="text">
+                      <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
+                        <span data-slate-zero-width="n" data-slate-length="0">
+                          <br>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="text-block__label-wrap">
+                  <input class="char-sheet__label centered " value="Умения и особенности">
                 </div>
               </div>
             </div>
@@ -858,14 +940,14 @@ input[type="text" i] {
 .char-sheet__body {
   display: flex;
   flex: 1 1;
-  margin: 0 -4pt;
+  margin: 0 -75pt 0 0;
 }
 .char-sheet__body-column {
   display: flex;
   flex-direction: column;
   height: 730pt;
   justify-content: flex-start;
-  margin: 0 4pt;
+  margin: 0 9pt;
   width: 33%;
 }
 
@@ -878,7 +960,7 @@ p *:last-child {
     margin-bottom: 0;
 }
 .char-sheet__label.min {
-  font-size: 5pt;
+  font-size: 7pt;
 }
 .char-sheet__name {
   border-bottom: 1pt solid #000;
@@ -1200,6 +1282,21 @@ form {
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.16rem;
+}
+.personality-block {
+    background: #eaeaea;
+    border-radius: 8pt;
+    margin-bottom: 5pt;
+    padding: 4pt 4pt 8pt;
+}
+.personality-block .text-block:first-of-type {
+    border-radius: 4pt 4pt 0 0;
+    height: 60pt;
+}
+.personality-block .text-block {
+    border-radius: 0;
+    height: 52pt;
+    margin-bottom: 4pt;
 }
 
 </style>
