@@ -313,27 +313,45 @@
                 </div>
                 <p class="modifier-block__label">пассивная мудрость (Восприятие)</p>
               </div>
-              <div class="text-block  ">
-                <div data-gramm="false" role="textbox" class="text-block__textarea" data-slate-editor="true" data-slate-node="value" contenteditable="true" zindex="-1" style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 7px; line-height: 12px; background: repeating-linear-gradient(rgb(255, 255, 255) 1px, rgb(255, 255, 255) 12px, rgb(218, 218, 218) 1px, rgb(218, 218, 218) 13px);">
+
+              <div class="text-block">
+                <div data-gramm="false" class="text-block__textarea" zindex="-1" contenteditable="true"   style="position: relative; outline: none; white-space: pre-wrap; overflow-wrap: break-word; font-size: 12px; line-height: 20px;">
                   <div data-slate-node="element" style="position: relative;">
                     <span data-slate-node="text">
                       <span data-slate-leaf="true" style="font-weight: normal; font-style: normal; text-decoration: none;">
                         <span data-slate-zero-width="n" data-slate-length="0">
                           <br>
                         </span>
-                        </span>
+                      </span>
                     </span>
                   </div>
+
                 </div>
+                <br>
                 <div class="text-block__label-wrap">
                   <input class="char-sheet__label centered " value="Прочие владения и языки">
                 </div>
-                <div class="text-block__controls"><span class="text-block__font-size">7</span>
-                  <button class="text-block__controls-button" data-sign="+" type="button">+</button>
-                  <button class="text-block__controls-button" data-sign="-" type="button">−</button>
-                </div>
               </div>
 
+            </div>
+            <div class="char-sheet__body-column">
+              <div class="vitality-block">
+                <div class="vitality-block__box no-back">
+                  <svg class="vitality-block__shield" width="48"height="60" viewBox="0 0 48 60" fill="none">
+                    <path d="M23.8494 0.802124L1.86096 12.5092V36.2236L9.39125 50.3321L23.8494 59.0374L38.0063 50.3321L46.139 36.2236V12.5092L23.8494 0.802124Z" fill="white"></path>
+                    <path d="M46.8264 12.1484L24.2164 0.13221C23.881 -0.0463404 23.479 -0.0438346 23.1461 0.138475L1.16172 12.1546C0.801164 12.352 0.577545 12.7291 0.577545 13.1395V28.8356C0.590736 41.7383 8.25532 53.4111 20.1084 58.5803L23.1599 59.9066C23.445 60.0306 23.7698 60.0312 24.0556 59.9078L27.494 58.4268C39.5669 53.3697 47.4212 41.5841 47.4225 28.5243V13.1395C47.4225 12.7247 47.1932 12.3432 46.8264 12.1484ZM45.921 28.5C45.9185 40.6596 38.2441 52.2944 27.0029 57L23.6109 58.2L20.6968 57C9.66353 52.1885 2.09155 41.3562 2.07899 29.3457V13.2L23.6997 1.5L45.921 13.2V28.5Z" fill="black"></path>
+                  </svg>
+                  <input name="ac" type="number" class="vitality-block__box-value vitality-block__shield-input char-sheet__input" autocomplete="off" value="">
+                  <p class="char-sheet__label centered min">КЗ</p>
+                </div>
+                <div class="vitality-block__box " style="box-sizing: inherit;">
+                  <button type="button" class="roller active">
+                    <input class="vitality-block__box-value" value="+0">
+                  </button>
+                  <p class="char-sheet__label centered min">Инициатива</p>
+                </div>
+
+              </div>
             </div>
           </section>
 
@@ -374,6 +392,7 @@ export default {
     this.getMessage();
   },
 };
+
 </script>
 
 <style scoped>
@@ -465,7 +484,7 @@ export default {
     border-radius: 50%;
     display: flex;
     font-family: Georgia;
-    font-size: 12px;
+    font-size: 14px;
     height: 13px;
     justify-content: center;
     margin: 0 2px;
@@ -473,6 +492,16 @@ export default {
     padding: 0;
     width: 13px;
 }
+.text-block__textarea {
+    background: repeating-linear-gradient(180deg,#fff 0px,#fff 17px,#dadada 0,#dadada 20px);;
+    border: 0;
+    flex: 1 1;
+    font-size: 10px;
+    padding: 0 2px;
+    resize: none;
+    width: 100%;
+}
+
 .saves-block {
     border: 1pt solid #000;
     border-radius: 2pt;
@@ -559,10 +588,15 @@ input[type="text" i] {
 }
 .char-sheet__label {
   font-family: Open Sans,sans-serif;
-  font-size: 8pt;
+  font-size: 7pt;
   font-weight: 400;
   margin-bottom: 0;
   text-transform: uppercase;
+}
+.char-sheet__label.centered {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 .char-skill.small {
     margin-bottom: 1.5pt;
@@ -574,7 +608,9 @@ input[type="text" i] {
   display: flex;
   margin-bottom: 7pt;
 }
-
+.char-sheet input[type=number] {
+    -moz-appearance: textfield;
+}
 .text-block {
     background: #fff;
     border: 1pt solid #000;
@@ -586,6 +622,8 @@ input[type="text" i] {
     overflow: hidden;
     padding: 3pt 2pt;
     position: relative;
+    overflow-y: auto
+
 }
 .text-block__label-wrap {
     background: #fff;
@@ -642,7 +680,7 @@ input[type="text" i] {
 .char-sheet__body-column {
   display: flex;
   flex-direction: column;
-  height: 668pt;
+  height: 730pt;
   justify-content: flex-start;
   margin: 0 4pt;
   width: 33%;
@@ -696,6 +734,66 @@ p *:last-child {
 }
 .char-sheet__skills {
   flex: 1 1;
+}
+.vitality-block {
+    align-items: center;
+    background: #eaeaea;
+    border-radius: 8pt;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5pt;
+    padding: 4pt 4pt 8pt;
+}
+.vitality-block__box {
+  background: #fff;
+  border: 1pt solid #000;
+  border-radius: 4pt;
+  display: flex;
+  flex-direction: column;
+  height: 40pt;
+  justify-content: center;
+  position: relative;
+  width: 44pt;
+}
+.vitality-block__box.no-back {
+    background: none;
+    border: 0;
+    height: 48pt;
+    margin-left: -3pt;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.vitality-block__shield {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.char-sheet input[type=number] {
+    -moz-appearance: textfield;
+}
+.vitality-block__shield-input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 74%;
+}
+.vitality-block__box-value {
+    background: none;
+    border: 0;
+    font-size: 9pt;
+    margin-bottom: 4pt;
+    margin-top: 6pt;
+    position: relative;
+    text-align: center;
+    width: 60%;
+}
+.vitality-block__box .char-sheet__label {
+    font-size: 7pt;
+    position: relative;
 }
 
 </style>

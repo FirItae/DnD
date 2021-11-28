@@ -129,13 +129,6 @@ export default {
   position: absolute;
   transform: translateY(100%);
 }
-.char-sheet__label.centered {
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-
 .char-sheet__name .char-sheet__label {
   margin-left: 9pt;
   transform: translateY(calc(100% + 2pt));
